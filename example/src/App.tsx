@@ -25,7 +25,7 @@ const App = () => {
     true: <Bold />,
     false: <AddImage />,
   }
-  const mixedIcons: SwitchMultiIconType<VectorIconType, IconComponentType> = {
+  const mixedIcons: SwitchMultiIconType<VectorIconType, ComponentIconType> = {
     true: { iconType: 'Ionicons', name: 'ios-lock-closed', size: 19, color: '#1c1c1e' },
     false: <AddImage />,
   }
