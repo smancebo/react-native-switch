@@ -12,11 +12,10 @@ import Thumb, {
   BoolWithIconOrComponent,
   BoolWithIcons,
   IconComponent,
+  ThumpIcon,
 } from './components/thumb';
 import Track from './components/track';
 import { BoolWithString } from './types';
-
-type IconOrComponent = VectorIconProps | IconComponent;
 
 interface IProps {
   style?: ViewStyle;
@@ -24,10 +23,7 @@ interface IProps {
   disabledTrackColor?: string;
   trackColor?: BoolWithString;
   thumbColor?: BoolWithString;
-  icons?:
-    | BoolWithIcons
-    | BoolWithComponent
-    | BoolWithIconOrComponent<IconOrComponent, IconOrComponent>;
+  icons?: ThumpIcon;
   disabledIconColor?: string;
   disabledThumbColor?: string;
   value: boolean;

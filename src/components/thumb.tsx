@@ -11,6 +11,8 @@ export type IconComponent =
   | React.ReactElement
   | null;
 
+export type IconOrComponent = VectorIconProps | IconComponent;
+
 export interface BoolWithIcons extends Indexable<VectorIconProps> {
   true: VectorIconProps;
   false: VectorIconProps;
@@ -26,6 +28,11 @@ export interface BoolWithIconOrComponent<T, K> extends Indexable<T | K> {
   false: K;
 }
 
+export type ThumpIcon =
+  | BoolWithIcons
+  | BoolWithComponent
+  | BoolWithIconOrComponent<IconOrComponent, IconOrComponent>;
+
 interface IProps {
   disabled?: boolean;
   range: number[];
@@ -34,7 +41,7 @@ interface IProps {
   size: number;
   value: boolean;
   colors?: BoolWithString;
-  icons?: BoolWithIcons;
+  icons?: ThumpIcon;
   disabledIconColor?: string;
   disabledColor?: string;
   pressIndicator?: boolean;
@@ -46,10 +53,7 @@ function isVectorIcon(
   return (icon as VectorIconProps).iconType !== undefined;
 }
 
-function getIconComponent(
-  icons: BoolWithIcons | BoolWithComponent | undefined,
-  value: string
-) {
+function getIconComponent(icons: ThumpIcon | undefined, value: string) {
   if (icons) {
     const icon = icons ? icons[value] : undefined;
     return icon;
