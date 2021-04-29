@@ -1,29 +1,14 @@
 {
-  "name": "react-native-module-template",
-  "version": "2.2.0",
-  "description": "A starter for the React Native library written in TypeScript, with linked example project and optional native code in Swift and Kotlin.",
-  "homepage": "https://github.com/demchenkoalex/react-native-module-template#readme",
+  "name": "@samcode/react-native-switch",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/smancebo/react-native-switch",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "author": "Alex Demchenko <alexdemchenko@yahoo.com>",
+  "author": "Samuel J. Mancebo <sjmancebo@gmail.com>",
   "license": "MIT",
   "files": [
-    "android",
-    "ios",
-    "lib",
-    "react-native-module-template.podspec",
-    "!.DS_Store",
-    "!.gradle",
-    "!.idea",
-    "!build",
-    "!gradle",
-    "!*.iml",
-    "!gradlew",
-    "!gradlew.bat",
-    "!local.properties",
-    "!project.xcworkspace",
-    "!xcshareddata",
-    "!xcuserdata"
+    "lib"
   ],
   "scripts": {
     "compile": "rm -rf lib && tsc -p .",
@@ -37,6 +22,7 @@
     "@react-native-community/eslint-config": "^2.0.0",
     "@types/jest": "^26.0.22",
     "@types/react-native": "^0.64.2",
+    "@types/react-native-vector-icons": "^6.4.6",
     "@types/react-test-renderer": "^17.0.1",
     "babel-jest": "^26.6.3",
     "eslint": "^7.23.0",
@@ -50,7 +36,8 @@
   },
   "peerDependencies": {
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "react-native-vector-icons": "^8.1.0"
   },
   "jest": {
     "preset": "react-native",
@@ -62,5 +49,8 @@
       "json",
       "node"
     ]
+  },
+  "dependencies": {
+    "react-native-vector-icons": "^8.1.0"
   }
 }
