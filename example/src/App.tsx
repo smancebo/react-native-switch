@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import Switch, { SwitchColorType, SwitchIconsType, SwitchMultiIconType, VectorIconType, IconComponentType, SwitchIconsComponentType } from '@samcode/react-native-switch'
+import Switch, {
+  SwitchColorType,
+  SwitchIconsType,
+  SwitchMultiIconType,
+  VectorIconType,
+  ComponentIconType,
+  SwitchIconsComponentType,
+} from '@samcode/react-native-switch'
 import { View, SafeAreaView } from 'react-native';
 import AddImage from './icons/add-image';
 import Bold from './icons/bold';

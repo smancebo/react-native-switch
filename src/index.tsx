@@ -158,4 +158,4 @@ export { BoolWithComponent as SwitchIconsComponentType };
 export { BoolWithString as SwitchColorType };
 export { BoolWithIconOrComponent as SwitchMultiIconType };
 export { VectorIconProps as VectorIconType };
-export { IconComponent as IconComponentType };
+export { IconComponent as ComponentIconType };
