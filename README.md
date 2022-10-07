@@ -208,6 +208,7 @@ const App = () => {
 | animationDuration  | The duration of the animation        | Number   | 200                                                       |
 | trackHeight  | the height of the switch track        | Number   | 26                                                       |
 | thumbSize  | the size of the switch thumb        | Number   | 26                                                       |
+| thumbStyle  | thumb  style object        | Object   | 26                                                       |
 
 ## Contributing
 

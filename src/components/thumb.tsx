@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import * as React from 'react';
-import { Animated } from 'react-native';
+import { Animated, ViewStyle } from 'react-native';
 
 import { styles } from '../styles';
 import { BoolWithString, Indexable } from '../types';
@@ -45,6 +45,7 @@ interface IProps {
   disabledIconColor?: string;
   disabledColor?: string;
   pressIndicator?: boolean;
+  style?: ViewStyle;
 }
 
 function isVectorIcon(
@@ -97,6 +98,7 @@ export default class Thumb extends React.Component<IProps> {
       },
       disabledIconColor = '#FFFFFF',
       disabledColor = '#9499AD',
+      style,
     } = this.props;
 
     const radius = Math.round(size / 2);
@@ -147,6 +149,7 @@ export default class Thumb extends React.Component<IProps> {
               width: size,
               borderRadius: radius,
               aspectRatio: 1,
+              ...style,
             },
           ]}
         >

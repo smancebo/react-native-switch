@@ -31,6 +31,7 @@ interface IProps {
   onValueChange?: (value: boolean) => void;
   thumbSize?: number;
   trackHeight?: number;
+  thumbStyle?: ViewStyle;
 }
 
 interface IState {
@@ -111,6 +112,7 @@ export default class Switch extends React.Component<IProps, IState> {
       value,
       trackHeight = 26,
       thumbSize = 26,
+      thumbStyle = {},
     } = this.props;
 
     const { height = 26, width = 52 } = style;
@@ -145,6 +147,7 @@ export default class Switch extends React.Component<IProps, IState> {
               icons={icons}
               disabledColor={disabledThumbColor}
               disabledIconColor={disabledIconColor}
+              style={thumbStyle}
             />
           </View>
         </TouchableWithoutFeedback>

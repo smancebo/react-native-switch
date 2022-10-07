@@ -1,6 +1,6 @@
 {
   "name": "@samcode/react-native-switch",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React Native Switch component With Icons support",
   "homepage": "https://github.com/smancebo/react-native-switch",
   "main": "lib/index.js",
