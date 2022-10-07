@@ -29,6 +29,8 @@ interface IProps {
   value: boolean;
   animationDuration?: number;
   onValueChange?: (value: boolean) => void;
+  thumbSize?: number;
+  trackHeight?: number;
 }
 
 interface IState {
@@ -107,6 +109,8 @@ export default class Switch extends React.Component<IProps, IState> {
       disabledIconColor,
       disabledThumbColor,
       value,
+      trackHeight = 26,
+      thumbSize = 26,
     } = this.props;
 
     const { height = 26, width = 52 } = style;
@@ -125,7 +129,7 @@ export default class Switch extends React.Component<IProps, IState> {
               animatedValue={this._animatedValue}
               disabled={disabled}
               width={Number(width)}
-              height={Number(height)}
+              height={Number(trackHeight || height)}
               disabledColor={disabledTrackColor}
               colors={trackColor}
             />
@@ -133,7 +137,7 @@ export default class Switch extends React.Component<IProps, IState> {
               range={this._animatedRange}
               animatedValue={this._animatedValue}
               pressIndicator={pressIndicator}
-              size={Number(height)}
+              size={Number(thumbSize || height)}
               value={!!value}
               disabled={disabled}
               colors={thumbColor}

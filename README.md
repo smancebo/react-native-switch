@@ -111,6 +111,7 @@ const App = () => {
       value={value}
       trackColor={trackColor}
       thumbColor={thumbColor}
+      icons={Icons}
     />
   )
 }
@@ -205,6 +206,8 @@ const App = () => {
 | disabledTrackColor | The color of the track when disabled | String   | "#BCBFC9"                                                 |
 | disabledIconColor  | The color of the icon when disabled  | String   | "#FFFFFF"                                                 |
 | animationDuration  | The duration of the animation        | Number   | 200                                                       |
+| trackHeight  | the height of the switch track        | Number   | 26                                                       |
+| thumbSize  | the size of the switch thumb        | Number   | 26                                                       |
 
 ## Contributing
 
